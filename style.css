@@ -746,6 +746,23 @@ body {
   .therapist-card {
     padding: 1.5rem;
   }
+
+  .brand-name {
+    font-size: 1.05rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@media (max-width: 350px) {
+  .brand-name {
+    font-size: 0.92rem;
+    max-width: 90px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -866,7 +883,7 @@ body {
   .nav-menu {
     display: none;
     position: absolute;
-    top: 64px;
+    top: 61px;
     left: 0;
     width: 100vw;
     background: #fff;
@@ -874,7 +891,8 @@ body {
     flex-direction: column;
     align-items: stretch;
     z-index: 1001;
-    padding: 0.5rem 0;
+    padding: 0;
+    border: none;
     transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     max-height: 0;
     overflow: hidden;
@@ -883,23 +901,12 @@ body {
     display: flex;
     max-height: 500px;
     overflow: visible;
-  }
-  .hamburger {
-    z-index: 1003;
+    padding: 0.5rem 0;
   }
   .nav-link {
-    display: block !important;
-    width: 100%;
-    text-align: left;
-    padding: 1.1rem 1.2rem;
-    font-size: 1.1rem;
-    border-radius: 0;
-    border-bottom: 1px solid #ececec;
-    border-right: none;
-    background: none;
-  }
-  .nav-link:last-child {
     border-bottom: none;
+    border-top: none;
+    background: none;
   }
   .nav-container {
     position: relative;
