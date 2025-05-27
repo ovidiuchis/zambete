@@ -516,8 +516,8 @@ body {
 }
 
 .therapist-avatar {
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -906,6 +906,7 @@ body {
   }
 }
 
+/* Mărire font meniu pe desktop */
 @media (min-width: 901px) {
   .nav-link {
     font-size: 1.25rem;
@@ -921,12 +922,5 @@ body {
   #navbar {
     height: auto;
     min-height: unset;
-  }
-  .hero-section {
-    padding-top: 64px; /* Asigură spațiu sub navbar pe mobil */
-    scroll-margin-top: 64px;
-  }
-  section[id] {
-    scroll-margin-top: 64px;
   }
 }
