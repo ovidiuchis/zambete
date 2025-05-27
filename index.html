@@ -65,16 +65,28 @@
           <span class="bar"></span>
         </button>
         <div class="nav-menu" id="mainNavMenu">
-          <button class="nav-link" onclick="scrollToSection('home')">
+          <button
+            class="nav-link"
+            onclick="scrollToSection('home'); closeMobileMenu()"
+          >
             Acasă
           </button>
-          <button class="nav-link" onclick="scrollToSection('about')">
+          <button
+            class="nav-link"
+            onclick="scrollToSection('about'); closeMobileMenu()"
+          >
             Despre
           </button>
-          <button class="nav-link" onclick="scrollToSection('therapists')">
+          <button
+            class="nav-link"
+            onclick="scrollToSection('therapists'); closeMobileMenu()"
+          >
             Terapeuți
           </button>
-          <button class="nav-link" onclick="scrollToSection('contact')">
+          <button
+            class="nav-link"
+            onclick="scrollToSection('contact'); closeMobileMenu()"
+          >
             Contact
           </button>
         </div>
@@ -451,6 +463,13 @@
         hamburgerBtn.setAttribute("aria-expanded", !expanded);
         navMenu.classList.toggle("open");
         hamburgerBtn.classList.toggle("open");
+      }
+      function closeMobileMenu() {
+        if (window.innerWidth <= 900) {
+          navMenu.classList.remove("open");
+          hamburgerBtn.classList.remove("open");
+          hamburgerBtn.setAttribute("aria-expanded", false);
+        }
       }
       hamburgerBtn.addEventListener("click", toggleMenu);
       window.addEventListener("resize", () => {
