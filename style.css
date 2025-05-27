@@ -746,23 +746,6 @@ body {
   .therapist-card {
     padding: 1.5rem;
   }
-
-  .brand-name {
-    font-size: 1.05rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 140px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-}
-
-@media (max-width: 350px) {
-  .brand-name {
-    font-size: 0.92rem;
-    max-width: 90px;
-  }
 }
 
 @media (max-width: 900px) {
