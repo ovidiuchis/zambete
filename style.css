@@ -1,0 +1,932 @@
+/* CSS Variables for Colors */
+:root {
+  --kidsgrow-blue: #3b82f6;
+  --kidsgrow-green: #10b981;
+  --kidsgrow-yellow: #f59e0b;
+  --kidsgrow-pink: #ec4899;
+  --kidsgrow-purple: #8b5cf6;
+  --kidsgrow-orange: #f97316;
+
+  --text-gray-800: #1f2937;
+  --text-gray-600: #4b5563;
+  --text-gray-400: #9ca3af;
+  --bg-white: #ffffff;
+  --bg-gray-50: #f9fafb;
+  --bg-gray-800: #1f2937;
+
+  --font-nunito: "Nunito", cursive;
+  --font-inter: "Inter", sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter);
+  line-height: 1.6;
+  color: var(--text-gray-800);
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(16, 185, 129, 0.1) 100%
+  );
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navigation */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-blue),
+    var(--kidsgrow-green)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.brand-name {
+  font-family: var(--font-nunito);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-gray-800);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  color: var(--text-gray-600);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--kidsgrow-blue);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  align-self: flex-end;
+  z-index: 1002;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.hamburger .bar {
+  width: 28px;
+  height: 3px;
+  background: #2c3e50;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+}
+
+.hamburger .bar:nth-child(1) {
+  top: 5px;
+}
+
+.hamburger .bar:nth-child(2) {
+  top: 15px;
+}
+
+.hamburger .bar:nth-child(3) {
+  top: 25px;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  top: 15px;
+  transform: rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  top: 15px;
+  transform: rotate(-45deg);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 1rem 0 1rem;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--kidsgrow-green);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.hero-title {
+  font-family: var(--font-nunito);
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.title-highlight {
+  display: block;
+  color: var(--kidsgrow-blue);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: var(--text-gray-600);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  padding: 1rem 2rem;
+  font-family: var(--font-nunito);
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--kidsgrow-blue);
+  color: white;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--kidsgrow-green);
+  border: 2px solid var(--kidsgrow-green);
+}
+
+.btn-secondary:hover {
+  background: var(--kidsgrow-green);
+  color: white;
+}
+
+.btn.large {
+  padding: 1.5rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Hero Visual */
+.visual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.visual-column.offset {
+  padding-top: 2rem;
+}
+
+.visual-item {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.visual-item:last-child {
+  margin-bottom: 0;
+}
+
+.visual-item.brain-icon {
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-yellow),
+    var(--kidsgrow-orange)
+  );
+  border-radius: 1.5rem;
+}
+
+.visual-item.heart-icon {
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-pink),
+    var(--kidsgrow-purple)
+  );
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.visual-item.book-icon {
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-green),
+    var(--kidsgrow-blue)
+  );
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.visual-item.users-icon {
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-blue),
+    var(--kidsgrow-purple)
+  );
+  border-radius: 1.5rem;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce-gentle {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-bounce-gentle-delayed {
+  animation: bounce-gentle 2s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+/* Sections */
+.about-section {
+  padding: 4rem 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.therapists-section {
+  padding: 4rem 0;
+}
+
+.contact-section {
+  padding: 4rem 0;
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.1),
+    rgba(16, 185, 129, 0.1)
+  );
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-family: var(--font-nunito);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-gray-800);
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.25rem;
+  color: var(--text-gray-600);
+  line-height: 1.7;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+.brain-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-blue),
+    var(--kidsgrow-purple)
+  );
+}
+.heart-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-green),
+    var(--kidsgrow-purple)
+  );
+}
+.users-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-yellow),
+    var(--kidsgrow-purple)
+  );
+}
+.book-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-pink),
+    var(--kidsgrow-purple)
+  );
+}
+
+.feature-title {
+  font-family: var(--font-nunito);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-gray-800);
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: var(--text-gray-600);
+}
+
+/* Therapists */
+.therapists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.therapist-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.therapist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.therapist-avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-family: var(--font-nunito);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.therapist-avatar.sarah {
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-blue),
+    var(--kidsgrow-green)
+  );
+}
+
+.therapist-avatar.michael {
+  background: linear-gradient(
+    135deg,
+    var(--kidsgrow-green),
+    var(--kidsgrow-blue)
+  );
+}
+
+.therapist-name {
+  font-family: var(--font-nunito);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-gray-800);
+  margin-bottom: 0.5rem;
+}
+
+.therapist-title {
+  color: var(--kidsgrow-blue);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.therapist-experience {
+  background: var(--bg-gray-50);
+  color: var(--text-gray-600);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  display: inline-block;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.therapist-description {
+  color: var(--text-gray-600);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.therapist-specialties h4 {
+  font-family: var(--font-nunito);
+  font-weight: 600;
+  color: var(--text-gray-800);
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.specialty-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.specialty-tag {
+  background: transparent;
+  color: var(--kidsgrow-green);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+/* Contact */
+.contact-content {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-family: var(--font-nunito);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-gray-800);
+  margin-bottom: 1rem;
+}
+
+.info-list p {
+  color: var(--text-gray-600);
+  margin-bottom: 0.75rem;
+}
+
+.contact-cta {
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-gray-800);
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-brand span {
+  font-family: var(--font-nunito);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.footer-text {
+  color: var(--text-gray-400);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .visual-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .visual-column.offset {
+    padding-top: 0;
+  }
+
+  .visual-item {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .visual-item.heart-icon,
+  .visual-item.book-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .therapists-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card,
+  .therapist-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    position: relative;
+  }
+  .nav-brand {
+    order: 1;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    z-index: 1101;
+  }
+  .hamburger {
+    order: 2;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-left: 1rem;
+    align-self: center;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.07);
+    border-radius: 50%;
+    z-index: 1102;
+    display: flex;
+  }
+  .nav-menu {
+    order: 3;
+  }
+  .nav-menu {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+  }
+  .nav-link {
+    display: block !important;
+    width: 100%;
+    text-align: left;
+    padding: 1.1rem 0.7rem;
+    font-size: 1.1rem;
+    border-radius: 0;
+    border-bottom: 1px solid #ececec;
+    border-right: none;
+    background: none;
+  }
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  .hero-visual {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .features-grid,
+  .therapists-grid,
+  .contact-info-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .feature-card,
+  .therapist-card,
+  .contact-info {
+    width: 100%;
+    min-width: 0;
+  }
+  .container {
+    padding: 0 0.5rem;
+  }
+  section,
+  .contact-card {
+    padding: 1.2rem 0.5rem;
+  }
+  .btn.large {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1.1rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .section-title {
+    font-size: 1.1rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-left: 1rem;
+    align-self: center;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.07);
+    border-radius: 50%;
+    z-index: 1102;
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 1001;
+    padding: 0.5rem 0;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 0;
+    overflow: hidden;
+  }
+  .nav-menu.open {
+    display: flex;
+    max-height: 500px;
+    overflow: visible;
+  }
+  .hamburger {
+    z-index: 1003;
+  }
+  .nav-link {
+    display: block !important;
+    width: 100%;
+    text-align: left;
+    padding: 1.1rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 0;
+    border-bottom: 1px solid #ececec;
+    border-right: none;
+    background: none;
+  }
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+  .nav-container {
+    position: relative;
+    padding-top: 60px;
+  }
+}
+
+@media (min-width: 901px) {
+  .nav-link {
+    font-size: 1.25rem;
+    padding: 0.7rem 0.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-container {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    min-height: 56px;
+  }
+  #navbar {
+    height: auto;
+    min-height: unset;
+  }
+  .hero-section {
+    padding-top: 64px; /* Asigură spațiu sub navbar pe mobil */
+    scroll-margin-top: 64px;
+  }
+  section[id] {
+    scroll-margin-top: 64px;
+  }
+}

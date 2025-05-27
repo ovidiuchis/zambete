@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ateliere Dezvoltare Cognitivă & Inteligență Emoțională</title>
+    <meta
+      name="description"
+      content="Ateliere de dezvoltarea emoțională, socială și cognitivă pentru copii"
+    />
+    <meta name="author" content="KidsGrow Therapy" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      property="og:title"
+      content="Ateliere cu Georgi & Ralu - Dezvoltare Cognitivă & Inteligență Emoțională"
+    />
+    <meta
+      property="og:description"
+      content="Ateliere de dezvoltarea cognitivă și inteligența emoțională la copii"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="nav-logo">
+            <!-- SVG logo -->
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
+              />
+              <path
+                d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
+              />
+            </svg>
+          </div>
+          <span class="brand-name">Ateliere de dezvoltare</span>
+        </div>
+        <button
+          class="hamburger"
+          id="hamburgerBtn"
+          aria-label="Deschide meniul"
+          aria-expanded="false"
+          aria-controls="mainNavMenu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <div class="nav-menu" id="mainNavMenu">
+          <button class="nav-link" onclick="scrollToSection('home')">
+            Acasă
+          </button>
+          <button class="nav-link" onclick="scrollToSection('about')">
+            Despre
+          </button>
+          <button class="nav-link" onclick="scrollToSection('therapists')">
+            Terapeuți
+          </button>
+          <button class="nav-link" onclick="scrollToSection('contact')">
+            Contact
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="badge">Joacă serioasă pentru oameni mici</div>
+            <h1 class="hero-title">
+              Îngrijim
+              <span class="title-highlight">mințile & inimile copiilor</span>
+            </h1>
+            <p class="hero-description">
+              Alătură-te atelierelor noastre specializate în dezvoltarea
+              cognitivă și inteligența emoțională pentru copii. Conduse de
+              terapeuți experimentați, dedicați copiilor.
+            </p>
+            <div class="hero-buttons">
+              <button
+                class="btn btn-primary"
+                onclick="scrollToSection('about')"
+              >
+                Află mai mult
+              </button>
+              <button
+                class="btn btn-secondary"
+                onclick="scrollToSection('contact')"
+              >
+                Începe acum
+              </button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="visual-grid">
+              <div class="visual-column">
+                <div class="visual-item brain-icon animate-float">
+                  <!-- SVG brain icon -->
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
+                    />
+                    <path
+                      d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
+                    />
+                  </svg>
+                </div>
+                <div class="visual-item heart-icon animate-bounce-gentle">
+                  <!-- SVG heart icon -->
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="visual-column offset">
+                <div class="visual-item book-icon animate-float-delayed">
+                  <!-- SVG book icon -->
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="visual-item users-icon animate-bounce-gentle-delayed"
+                >
+                  <!-- SVG users icon -->
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="m22 21-3-3" />
+                    <path d="m16 16 3 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Abordarea nostră</h2>
+          <p class="section-description">
+            Combinăm tehnici terapeutice bazate pe evidențe cu activități
+            distractive și captivante pentru a sprijini dezvoltarea cognitivă și
+            emoțională a copiilor.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature cards -->
+          <div class="feature-card">
+            <div class="feature-icon brain-gradient">
+              <!-- SVG brain icon -->
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
+                />
+                <path
+                  d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
+                />
+              </svg>
+            </div>
+            <h3 class="feature-title">Dezvoltare cognitivă</h3>
+            <p class="feature-description">
+              Îmbunătățirea memoriei, atenției, rezolvării problemelor și
+              funcțiilor executive prin activități țintite.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon heart-gradient">
+              <!-- SVG heart icon -->
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
+                />
+              </svg>
+            </div>
+            <h3 class="feature-title">Inteligență emoțională</h3>
+            <p class="feature-description">
+              Construirea conștientizării de sine, empatiei, reglării emoționale
+              și abilităților sociale într-un mediu sigur.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon users-gradient">
+              <!-- SVG users icon -->
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="m22 21-3-3" />
+                <path d="m16 16 3 3" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Abilități sociale</h3>
+            <p class="feature-description">
+              Promovarea comunicării, cooperării și construirii relațiilor prin
+              activități interactive de grup.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon book-gradient">
+              <!-- SVG book icon -->
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+                />
+              </svg>
+            </div>
+            <h3 class="feature-title">Sprijin în învățare</h3>
+            <p class="feature-description">
+              Dezvoltarea strategiilor eficiente de învățare și creșterea
+              încrederii în medii academice și sociale.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Therapists Section -->
+    <section id="therapists" class="therapists-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Cunoaște terapeuții</h2>
+          <p class="section-description">
+            Echipa noastră experimentată de specialiști în dezvoltarea copiilor
+            are o grijă autentică în fiecare sesiune.
+          </p>
+        </div>
+
+        <div class="therapists-grid">
+          <!-- Therapist cards -->
+          <div class="therapist-card">
+            <div class="therapist-avatar sarah">SJ</div>
+            <h3 class="therapist-name">Georgi Boțu</h3>
+            <p class="therapist-title">
+              Psiholog pentru Copii & Specialist în Dezvoltare Cognitivă
+            </p>
+            <div class="therapist-experience">Experiență 5+ ani</div>
+            <p class="therapist-description">
+              Georgi se specializează în ajutarea copiilor să dezvolte abilități
+              cognitive puternice și să depășească provocările de învățare prin
+              abordări terapeutice inovatoare, bazate pe joc.
+            </p>
+            <div class="therapist-specialties">
+              <h4>Specializări:</h4>
+              <div class="specialty-tags">
+                <span class="specialty-tag"
+                  >Terapie Cognitiv-Comportamentală</span
+                >
+                <span class="specialty-tag">Tulburări de Învățare</span>
+                <span class="specialty-tag">Suport ADHD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="therapist-card">
+            <div class="therapist-avatar michael">MC</div>
+            <h3 class="therapist-name">Raluca Bradea</h3>
+            <p class="therapist-title">
+              Terapeut Licențiat & Expert în Inteligență Emoțională
+            </p>
+            <div class="therapist-experience">Experiență 5+ ani</div>
+            <p class="therapist-description">
+              Raluca se concentrează pe construirea inteligenței emoționale și
+              rezilienței la copii, ajutându-i să înțeleagă și să-și gestioneze
+              eficient emoțiile.
+            </p>
+            <div class="therapist-specialties">
+              <h4>Specializări:</h4>
+              <div class="specialty-tags">
+                <span class="specialty-tag">Reglare Emoțională</span>
+                <span class="specialty-tag">Abilități Sociale</span>
+                <span class="specialty-tag">Managementul Anxietății</span>
+                <span class="specialty-tag">Mindfulness pentru Copii</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-content">
+          <h2 class="section-title">Gata să ajuți copilul tău să crească?</h2>
+          <p class="section-description">
+            Contactează-ne astăzi pentru a afla mai multe despre atelierele
+            noastre și cum putem sprijini parcursul de dezvoltare cognitivă și
+            emoțională al copilului tău.
+          </p>
+          <div
+            class="contact-card"
+            style="background: none; box-shadow: none; padding: 0"
+          >
+            <iframe
+              data-tally-src="https://tally.so/embed/wk1N1e?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              loading="lazy"
+              width="100%"
+              height="324"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              title="Contact ateliere"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      var d = document,
+        w = "https://tally.so/widgets/embed.js",
+        v = function () {
+          "undefined" != typeof Tally
+            ? Tally.loadEmbeds()
+            : d
+                .querySelectorAll("iframe[data-tally-src]:not([src])")
+                .forEach(function (e) {
+                  e.src = e.dataset.tallySrc;
+                });
+        };
+      if ("undefined" != typeof Tally) v();
+      else if (d.querySelector('script[src="' + w + '"]') == null) {
+        var s = d.createElement("script");
+        (s.src = w), (s.onload = v), (s.onerror = v), d.body.appendChild(s);
+      }
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">
+            © 2025 Ateliere cu Ralu & Georgi. Ajutăm copiii să dezvolte
+            abilități cognitive și inteligență emoțională.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      // Hamburger menu logic
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const navMenu = document.getElementById("mainNavMenu");
+      function toggleMenu() {
+        const expanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
+        hamburgerBtn.setAttribute("aria-expanded", !expanded);
+        navMenu.classList.toggle("open");
+        hamburgerBtn.classList.toggle("open");
+      }
+      hamburgerBtn.addEventListener("click", toggleMenu);
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+          navMenu.classList.remove("open");
+          hamburgerBtn.classList.remove("open");
+          hamburgerBtn.setAttribute("aria-expanded", false);
+        }
+      });
+    </script>
+  </body>
+</html>
