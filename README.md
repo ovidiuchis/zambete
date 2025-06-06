@@ -1,3 +1,9 @@
+## ☕ Susține
+
+Dacă munca mea te încurajează sau îți este de ajutor, mă poți susține aici 👇
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/ochis)
+
 # Ateliere Dezvoltare Cognitivă & Inteligență Emoțională
 
 🎨 **Website**: Un site de prezentare pentru atelierele de dezvoltare cognitivă și inteligență emoțională dedicate copiilor, organizate de echipa KidsGrow Therapy.
