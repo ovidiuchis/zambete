@@ -671,6 +671,95 @@ body {
   color: var(--text-gray-400);
 }
 
+/* Stiluri suplimentare pentru pagina 2025.html (ateliere vară) */
+.summer2025-wrapper {
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.08),
+    rgba(16, 185, 129, 0.08)
+  );
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.07);
+  padding: 2.5rem 1.2rem 2.2rem 1.2rem;
+  max-width: 700px;
+  margin: 2.5rem auto 2.5rem auto;
+  text-align: center;
+}
+
+.summer2025-title {
+  font-family: var(--font-nunito);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--kidsgrow-blue);
+  margin-bottom: 1.2rem;
+}
+
+.summer2025-subtitle {
+  font-family: var(--font-nunito);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--kidsgrow-green);
+  margin-bottom: 1.2rem;
+}
+
+.summer2025-info,
+.summer2025-list {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.07);
+  padding: 1.1rem 1rem;
+  margin-bottom: 1.2rem;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+}
+
+.summer2025-list {
+  padding-left: 2rem;
+}
+
+.summer2025-contact {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--kidsgrow-blue);
+}
+
+@media (max-width: 600px) {
+  .summer2025-wrapper {
+    padding: 1.2rem 0.3rem 1.2rem 0.3rem;
+    border-radius: 1rem;
+  }
+  .summer2025-title {
+    font-size: 1.2rem;
+  }
+  .summer2025-subtitle {
+    font-size: 1rem;
+  }
+  .summer2025-info,
+  .summer2025-list {
+    padding: 0.7rem 0.5rem;
+    border-radius: 0.7rem;
+    font-size: 0.98rem;
+  }
+}
+
+/* Set both sections to the previous, wider contact-section width (max-width: 900px) */
+.summer2025-wrapper,
+#contact.contact-section {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media (max-width: 950px) {
+  .summer2025-wrapper,
+  #contact.contact-section {
+    max-width: 98vw;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-menu {
@@ -931,5 +1020,43 @@ body {
   }
   section[id] {
     scroll-margin-top: 80px;
+  }
+}
+
+/* Stil suplimentar pentru formularul de înscriere din 2025.html, să arate ca secțiunea de contact de pe index */
+#inscriere2025 {
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.08),
+    rgba(16, 185, 129, 0.08)
+  );
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.07);
+  padding: 2.5rem 1.2rem 2.2rem 1.2rem;
+  max-width: 700px;
+  margin: 2.5rem auto 2.5rem auto;
+  text-align: center;
+}
+#inscriere2025 h2 {
+  font-family: var(--font-nunito);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--kidsgrow-blue);
+  margin-bottom: 1.2rem;
+}
+#inscriere2025 iframe {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.07);
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 600px) {
+  #inscriere2025 {
+    padding: 1.2rem 0.3rem 1.2rem 0.3rem;
+    border-radius: 1rem;
+  }
+  #inscriere2025 h2 {
+    font-size: 1.2rem;
   }
 }
