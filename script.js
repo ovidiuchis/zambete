@@ -13,7 +13,7 @@ function scrollToSection(sectionId) {
 
     window.scrollTo({
       top: elementPosition,
-      behavior: "smooth",
+      behavior: "smooth"
     });
 
     // Update active nav link
@@ -25,7 +25,7 @@ function scrollToSection(sectionId) {
 function updateActiveNavLink(sectionId) {
   // Remove active class from all nav links
   const navLinks = document.querySelectorAll(".nav-link");
-  navLinks.forEach((link) => link.classList.remove("active"));
+  navLinks.forEach(link => link.classList.remove("active"));
 
   // Add active class to current nav link
   const sections = ["home", "about", "therapists", "contact"];
@@ -41,8 +41,8 @@ function initScrollSpy() {
   const navbarHeight = document.getElementById("navbar").offsetHeight;
 
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+    entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           const sectionId = entry.target.getAttribute("id");
           activeSection = sectionId;
@@ -52,11 +52,11 @@ function initScrollSpy() {
     },
     {
       rootMargin: `-${navbarHeight}px 0px -50% 0px`,
-      threshold: 0.1,
+      threshold: 0.1
     }
   );
 
-  sections.forEach((section) => {
+  sections.forEach(section => {
     observer.observe(section);
   });
 }
@@ -80,7 +80,7 @@ function initNavbarScroll() {
 function initCardHoverEffects() {
   const cards = document.querySelectorAll(".feature-card, .therapist-card");
 
-  cards.forEach((card) => {
+  cards.forEach(card => {
     card.addEventListener("mouseenter", () => {
       card.style.transform = "translateY(-8px)";
     });
@@ -95,8 +95,8 @@ function initCardHoverEffects() {
 function initButtonEffects() {
   const buttons = document.querySelectorAll(".btn");
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", (e) => {
+  buttons.forEach(button => {
+    button.addEventListener("click", e => {
       // Create ripple effect
       const ripple = document.createElement("span");
       const rect = button.getBoundingClientRect();

@@ -29,12 +29,7 @@ body {
   font-family: var(--font-inter);
   line-height: 1.6;
   color: var(--text-gray-800);
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.1) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(16, 185, 129, 0.1) 100%
-  );
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 1) 50%, rgba(16, 185, 129, 0.1) 100%);
   min-height: 100vh;
 }
 
@@ -75,11 +70,7 @@ body {
 .nav-logo {
   width: 40px;
   height: 40px;
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-blue),
-    var(--kidsgrow-green)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-blue), var(--kidsgrow-green));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -291,42 +282,26 @@ body {
 }
 
 .visual-item.brain-icon {
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-yellow),
-    var(--kidsgrow-orange)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-yellow), var(--kidsgrow-orange));
   border-radius: 1.5rem;
 }
 
 .visual-item.heart-icon {
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-pink),
-    var(--kidsgrow-purple)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-pink), var(--kidsgrow-purple));
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
 }
 
 .visual-item.book-icon {
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-green),
-    var(--kidsgrow-blue)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-green), var(--kidsgrow-blue));
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
 }
 
 .visual-item.users-icon {
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-blue),
-    var(--kidsgrow-purple)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-blue), var(--kidsgrow-purple));
   border-radius: 1.5rem;
 }
 
@@ -382,11 +357,7 @@ body {
 
 .contact-section {
   padding: 4rem 0;
-  background: linear-gradient(
-    90deg,
-    rgba(59, 130, 246, 0.1),
-    rgba(16, 185, 129, 0.1)
-  );
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
 }
 
 .section-header {
@@ -451,32 +422,16 @@ body {
 }
 
 .brain-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-blue),
-    var(--kidsgrow-purple)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-blue), var(--kidsgrow-purple));
 }
 .heart-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-green),
-    var(--kidsgrow-purple)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-green), var(--kidsgrow-purple));
 }
 .users-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-yellow),
-    var(--kidsgrow-purple)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-yellow), var(--kidsgrow-purple));
 }
 .book-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-pink),
-    var(--kidsgrow-purple)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-pink), var(--kidsgrow-purple));
 }
 
 .feature-title {
@@ -531,19 +486,11 @@ body {
 }
 
 .therapist-avatar.sarah {
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-blue),
-    var(--kidsgrow-green)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-blue), var(--kidsgrow-green));
 }
 
 .therapist-avatar.michael {
-  background: linear-gradient(
-    135deg,
-    var(--kidsgrow-green),
-    var(--kidsgrow-blue)
-  );
+  background: linear-gradient(135deg, var(--kidsgrow-green), var(--kidsgrow-blue));
 }
 
 .therapist-name {
@@ -673,11 +620,7 @@ body {
 
 /* Stiluri suplimentare pentru pagina 2025.html (ateliere vară) */
 .summer2025-wrapper {
-  background: linear-gradient(
-    90deg,
-    rgba(59, 130, 246, 0.08),
-    rgba(16, 185, 129, 0.08)
-  );
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.08), rgba(16, 185, 129, 0.08));
   border-radius: 1.5rem;
   box-shadow: 0 4px 16px rgba(59, 130, 246, 0.07);
   padding: 2.5rem 1.2rem 2.2rem 1.2rem;
@@ -1025,11 +968,7 @@ body {
 
 /* Stil suplimentar pentru formularul de înscriere din 2025.html, să arate ca secțiunea de contact de pe index */
 #inscriere2025 {
-  background: linear-gradient(
-    90deg,
-    rgba(59, 130, 246, 0.08),
-    rgba(16, 185, 129, 0.08)
-  );
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.08), rgba(16, 185, 129, 0.08));
   border-radius: 1.5rem;
   box-shadow: 0 4px 16px rgba(59, 130, 246, 0.07);
   padding: 2.5rem 1.2rem 2.2rem 1.2rem;
