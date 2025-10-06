@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Atelier de Toamnă 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Atelier de toamnă - activități cu tematică de toamnă pentru copii 3-6 ani, dezvoltare socio-emoțională și senzorială"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="atelier-season-autumn">
+    <nav id="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="nav-logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"
+              />
+              <path
+                d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"
+              />
+            </svg>
+          </div>
+          <a href="ateliere.html" class="brand-name" style="text-decoration: none; color: inherit">Atelier de Toamnă</a>
+        </div>
+        <button
+          class="hamburger"
+          id="hamburgerBtn"
+          aria-label="Deschide meniul"
+          aria-expanded="false"
+          aria-controls="mainNavMenu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <div class="nav-menu" id="mainNavMenu">
+          <button class="nav-link" onclick="window.location.href='index.html'">Acasă</button>
+          <button class="nav-link" onclick="window.location.href='ateliere.html'">Ateliere</button>
+          <button class="nav-link" onclick="scrollToSection('detalii')">Detalii</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container atelier-page" style="scroll-margin-top: 90px">
+      <nav class="breadcrumbs" aria-label="breadcrumb">
+        <ol>
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="ateliere.html">Ateliere</a></li>
+          <li aria-current="page">Toamnă 2025</li>
+        </ol>
+      </nav>
+      <header class="atelier-hero">
+        <h1 class="atelier-title">ATELIER DE TOAMNĂ</h1>
+        <div class="atelier-meta">
+          <div class="meta-item"><strong>Luna:</strong> Octombrie</div>
+          <div class="meta-item"><strong>Zi:</strong> Sâmbătă 11</div>
+          <div class="meta-item"><strong>Interval:</strong> 11:00 – 12:30</div>
+          <div class="meta-item"><strong>Vârste:</strong> 3 – 6 ani</div>
+        </div>
+      </header>
+
+      <section id="detalii" class="atelier-section">
+        <h2>Descriere</h2>
+        <p class="atelier-text">
+          Activități cu tematică de toamnă într-un cadru inclusiv centrat pe dezvoltarea socio-emoțională și senzorială a
+          copiilor.
+        </p>
+      </section>
+
+      <section class="atelier-section">
+        <h2>Loc desfășurare</h2>
+        <p class="atelier-text">Cluj-Napoca, str. Haiducului, nr. 9</p>
+      </section>
+
+      <section class="atelier-section">
+        <h2>Înscrieri & Detalii</h2>
+        <div class="atelier-contact">
+          <p>📍 <strong>Loc:</strong> Cluj-Napoca, str. Haiducului, nr. 9</p>
+          <p>📞 0752854507 - Ralu</p>
+          <p>📞 0757592659 - Georgi</p>
+          <p>
+            📘 Facebook:
+            <a href="https://www.facebook.com/profile.php?id=61576915013549" target="_blank">Zâmbete Georgi și Ralu</a>
+          </p>
+          <p>
+            📸 Instagram:
+            <a href="https://instagram.com/zambete.cu.georgi.si.ralu" target="_blank">@zambete.cu.georgi.si.ralu</a>
+          </p>
+          <p><em>Acest atelier nu necesită formular de înscriere online. Contactează-ne direct pentru locuri.</em></p>
+        </div>
+      </section>
+
+      <section class="atelier-section note-section">
+        <p class="atelier-motto">Joacă serioasă pentru oameni mici! 🍂</p>
+        <p style="text-align: center; margin-top: 1rem">
+          <a class="poster-link poster-trigger" href="assets/toamna25.jpg" rel="noopener">Vezi afișul atelierului</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">© 2025 Ateliere cu Ralu & Georgi. Toamna plină de zâmbete și descoperiri!</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const navMenu = document.getElementById("mainNavMenu");
+      function toggleMenu() {
+        const expanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
+        hamburgerBtn.setAttribute("aria-expanded", !expanded);
+        navMenu.classList.toggle("open");
+        hamburgerBtn.classList.toggle("open");
+      }
+      function closeMobileMenu() {
+        if (window.innerWidth <= 900) {
+          navMenu.classList.remove("open");
+          hamburgerBtn.classList.remove("open");
+          hamburgerBtn.setAttribute("aria-expanded", false);
+        }
+      }
+      hamburgerBtn.addEventListener("click", toggleMenu);
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+          navMenu.classList.remove("open");
+          hamburgerBtn.classList.remove("open");
+          hamburgerBtn.setAttribute("aria-expanded", false);
+        }
+      });
+      function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) {
+          const h = document.getElementById("navbar").offsetHeight;
+          const p = el.offsetTop - h;
+          window.scrollTo({ top: p, behavior: "smooth" });
+        }
+      }
+      // Lightbox init
+      document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll(".poster-trigger");
+        if (!links.length) return;
+        const overlay = document.createElement("div");
+        overlay.className = "lightbox-overlay";
+        overlay.innerHTML = `<div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Afiș atelier"><button class="lightbox-close" aria-label="Închide">×</button><img alt="Afiș atelier" /><div class="lightbox-caption"></div></div>`;
+        document.body.appendChild(overlay);
+        const img = overlay.querySelector("img");
+        const cap = overlay.querySelector(".lightbox-caption");
+        const closeBtn = overlay.querySelector(".lightbox-close");
+        function open(src, caption) {
+          img.src = "";
+          img.src = src;
+          cap.textContent = caption || "";
+          overlay.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function close() {
+          overlay.classList.remove("open");
+          img.src = "";
+          document.body.style.overflow = "";
+        }
+        links.forEach(a =>
+          a.addEventListener("click", e => {
+            e.preventDefault();
+            open(a.getAttribute("href"), a.textContent.trim());
+          })
+        );
+        overlay.addEventListener("click", e => {
+          if (e.target === overlay) close();
+        });
+        closeBtn.addEventListener("click", close);
+        document.addEventListener("keydown", e => {
+          if (e.key === "Escape" && overlay.classList.contains("open")) close();
+        });
+        img.addEventListener("error", () => {
+          cap.textContent = "Imagine indisponibilă";
+        });
+      });
+    </script>
+  </body>
+</html>
