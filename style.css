@@ -61,6 +61,13 @@ body {
   align-items: center;
 }
 
+/* Desktop navigation - thicker navbar */
+@media (min-width: 901px) {
+  .nav-container {
+    padding: 1rem 1rem;
+  }
+}
+
 .nav-brand {
   display: flex;
   align-items: center;
